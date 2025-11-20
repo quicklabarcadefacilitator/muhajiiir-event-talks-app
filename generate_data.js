@@ -1,0 +1,61 @@
+const fs = require('fs');
+
+const talks = [
+  {
+    "title": "The Future of Artificial Intelligence",
+    "speakers": ["Dr. Evelyn Reed"],
+    "categories": ["AI", "Machine Learning"],
+    "duration": 60,
+    "description": "A deep dive into the latest advancements in AI and what to expect in the coming years.",
+    "startTime": "10:00 AM",
+    "endTime": "11:00 AM"
+  },
+  {
+    "title": "Quantum Computing: A New Paradigm",
+    "speakers": ["Prof. Kenji Tanaka"],
+    "categories": ["Quantum Computing", "Physics"],
+    "duration": 60,
+    "description": "Exploring the principles of quantum computing and its potential to solve complex problems.",
+    "startTime": "11:10 AM",
+    "endTime": "12:10 PM"
+  },
+  {
+    "title": "Building Scalable Web Applications",
+    "speakers": ["Maria Rodriguez", "John Smith"],
+    "categories": ["Web Development", "Scalability"],
+    "duration": 60,
+    "description": "Strategies and best practices for designing and building web applications that can handle millions of users.",
+    "startTime": "12:20 PM",
+    "endTime": "1:20 PM"
+  },
+  {
+    "title": "The Ethics of Technology",
+    "speakers": ["Dr. David Chen"],
+    "categories": ["Ethics", "Technology"],
+    "duration": 60,
+    "description": "A discussion on the ethical implications of new technologies and the role of developers in shaping the future.",
+    "startTime": "2:20 PM",
+    "endTime": "3:20 PM"
+  },
+  {
+    "title": "Cybersecurity in a Connected World",
+    "speakers": ["Alex Ivanov"],
+    "categories": ["Cybersecurity"],
+    "duration": 60,
+    "description": "An overview of the current cybersecurity landscape and how to protect against emerging threats.",
+    "startTime": "3:30 PM",
+    "endTime": "4:30 PM"
+  },
+  {
+    "title": "The Rise of Serverless Architectures",
+    "speakers": ["Samantha Miller"],
+    "categories": ["Serverless", "Cloud Computing"],
+    "duration": 60,
+    "description": "An introduction to serverless computing and how it is changing the way we build and deploy applications.",
+    "startTime": "4:40 PM",
+    "endTime": "5:40 PM"
+  }
+];
+
+fs.writeFileSync('src/talks.json', JSON.stringify(talks, null, 2));
+console.log('Successfully generated src/talks.json');
